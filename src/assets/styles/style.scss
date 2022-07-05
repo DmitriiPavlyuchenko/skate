@@ -1,0 +1,8 @@
+@import "./utils/fonts",
+"./utils/variables",
+"utils/normalize",
+"utils/default-settings";
+
+@import "components/header";
+
+@import "views/home-page";

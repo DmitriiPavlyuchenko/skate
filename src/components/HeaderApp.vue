@@ -2,11 +2,13 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import "@/assets/styles/style.scss"
 
 export default defineComponent({
-  name: "App",
-})
+  name: "HeaderApp",
+  data() {
+    return {};
+  },
+});
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

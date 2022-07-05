@@ -2,11 +2,8 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import "@/assets/styles/style.scss"
 
 export default defineComponent({
-  name: "App",
+  name: "HomePage"
 })
 </script>
-
-<style lang="scss"></style>
