@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/news",
     name: "news",
-    component: () => import("/src/views/NewsPage.vue"),
+    component: () => import("@/views/NewsPage.vue"),
   },
   {
     path: "/series",
@@ -30,6 +30,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/videos",
     name: "videos",
     component: () => import("@/views/VideosPage.vue"),
+  },
+  {
+    path: "/sign_in",
+    name: "sign_in",
+    component: () => import("@/components/forms/SignInForm.vue"),
   },
 ];
 
