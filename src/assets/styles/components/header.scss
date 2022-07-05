@@ -1,0 +1,57 @@
+.header {
+  background-color: $white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0 2px 10px #0000003F;
+
+  &__container {
+    display: flex;
+    min-height: 70px;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo {
+
+  }
+
+  &__aside {
+    display: flex;
+    flex: 0 1 100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__authorization {
+    display: flex;
+    gap: 15px;
+    flex: 0 1 100%;
+    justify-content: flex-end;
+  }
+
+  &__registration {
+    color: $black;
+  }
+
+  &__registration:hover {
+    color: $grey;
+  }
+
+  &__registration:active {
+    color: $grey;
+  }
+
+  &__login {
+    color: $black;
+  }
+
+  &__login:hover {
+    color: $grey;
+  }
+
+  &__login:active {
+    color: $grey;
+  }
+}

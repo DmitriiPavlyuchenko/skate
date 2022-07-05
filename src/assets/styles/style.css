@@ -482,4 +482,49 @@ textarea {
   }
 }
 
+.header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2470588235);
+}
+.header__container {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  gap: 40px;
+}
+.header__aside {
+  display: flex;
+  flex: 0 1 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header__authorization {
+  display: flex;
+  gap: 15px;
+  flex: 0 1 100%;
+  justify-content: flex-end;
+}
+.header__registration {
+  color: #000000;
+}
+.header__registration:hover {
+  color: #696969;
+}
+.header__registration:active {
+  color: #696969;
+}
+.header__login {
+  color: #000000;
+}
+.header__login:hover {
+  color: #696969;
+}
+.header__login:active {
+  color: #696969;
+}
+
 /*# sourceMappingURL=style.css.map */

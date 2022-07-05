@@ -1,0 +1,29 @@
+.nav-menu {
+
+  &__list {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__link {
+    cursor: pointer;
+    color: $black;
+  }
+
+  &__link:hover {
+    color: $grey;
+  }
+
+  &__link:active {
+    color: $grey;
+  }
+}
+
+@media (max-width: 1300px) {
+  .nav-menu {
+
+    &__list {
+      gap: 10px;
+    }
+  }
+}
