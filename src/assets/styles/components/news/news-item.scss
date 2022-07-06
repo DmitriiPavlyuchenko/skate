@@ -57,4 +57,10 @@
     flex-direction: column;
     gap: 15px;
   }
+
+  &__open {
+    padding: 10px 15px;
+    color: #ffffff;
+    border-radius: 15px;
+  }
 }

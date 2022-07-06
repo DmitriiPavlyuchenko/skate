@@ -660,6 +660,11 @@ textarea {
   flex-direction: column;
   gap: 15px;
 }
+.news-item__open {
+  padding: 10px 15px;
+  color: #ffffff;
+  border-radius: 15px;
+}
 
 .news__list {
   display: grid;
