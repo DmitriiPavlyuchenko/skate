@@ -40,7 +40,11 @@
           </li>
         </ul>
         <MobileTransition name="mobile-menu">
-          <ul v-show="isMobileNav" class="nav-menu__mobile-list">
+          <ul
+            v-show="isMobileNav"
+            class="nav-menu__mobile-list"
+            @click="isMobileNav = false"
+          >
             <li class="nav-menu__mobile-item">
               <router-link :to="{ name: 'news' }" class="nav-menu__mobile-link"
                 >Новости
@@ -108,9 +112,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import MobileTransition from "@/components/transitions/MobileTransition.vue";
 
 export default defineComponent({
   name: "HeaderApp",
+  components: {
+    MobileTransition,
+  },
   data() {
     return {
       isMobile: false,

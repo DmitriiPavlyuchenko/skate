@@ -13,7 +13,7 @@ export default {
 <style lang="scss" scoped>
 .mobile-menu-enter-active,
 .mobile-menu-leave-active {
-  transition: 0.5s ease all;
+  transition: 0.9s ease all;
 }
 
 .mobile-menu-enter-from,
