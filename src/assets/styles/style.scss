@@ -1,8 +1,14 @@
-@import "./utils/fonts",
-"./utils/variables",
+@import "utils/fonts",
+"utils/variables",
 "utils/normalize",
 "utils/default-settings";
 
+@import "@/assets/icon-fonts/style.css";
+
 @import "components/header";
+
+@import "blocks/logo",
+"blocks/menu/nav-menu",
+"blocks/menu/mobile-menu";
 
 @import "views/home-page";

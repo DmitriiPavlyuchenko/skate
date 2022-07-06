@@ -1,3 +1,4 @@
+@import "@/assets/icon-fonts/style.css";
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
@@ -495,6 +496,10 @@ textarea {
   min-height: 70px;
   align-items: center;
   gap: 40px;
+  position: relative;
+}
+.header__menu {
+  flex: 0 1 100%;
 }
 .header__aside {
   display: flex;
@@ -508,23 +513,106 @@ textarea {
   flex: 0 1 100%;
   justify-content: flex-end;
 }
-.header__registration {
+.header__registration, .header__login {
   color: #000000;
 }
-.header__registration:hover {
+.header__registration:hover, .header__login:hover {
   color: #696969;
 }
-.header__registration:active {
+.header__registration:active, .header__login:active {
   color: #696969;
 }
-.header__login {
+.header__mobile-menu {
+  display: none;
+}
+
+@media (max-width: 998px) {
+  .header__container {
+    gap: 25px;
+  }
+  .header__menu {
+    flex: 0 1 65%;
+  }
+  .header__aside {
+    flex: none;
+  }
+  .header__authorization {
+    flex: none;
+  }
+}
+@media (max-width: 780px) {
+  .header__container {
+    min-height: 60px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__mobile-menu {
+    display: flex;
+    align-items: center;
+    order: 2;
+    flex: 0 1 50%;
+    justify-content: flex-end;
+  }
+  .header__logo {
+    order: 2;
+    flex: 0 1 50%;
+  }
+  .header__aside {
+    display: none;
+  }
+}
+.logo__image {
+  width: 220px;
+  height: 30px;
+}
+
+@media (max-width: 1300px) {
+  .logo__image {
+    width: 180px;
+    height: 25px;
+  }
+}
+.nav-menu__list {
+  display: flex;
+  gap: 15px;
+}
+.nav-menu__link {
+  cursor: pointer;
   color: #000000;
 }
-.header__login:hover {
+.nav-menu__link:hover {
   color: #696969;
 }
-.header__login:active {
+.nav-menu__link:active {
   color: #696969;
+}
+
+@media (max-width: 1300px) {
+  .nav-menu__list {
+    gap: 10px;
+  }
+}
+.mobile-menu__burger {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.mobile-menu__item {
+  width: 75%;
+  align-self: flex-end;
+  border: 2px solid #000000;
+}
+.mobile-menu__item:first-child {
+  width: 100%;
+  border: 2px solid #696969;
+}
+.mobile-menu__item:last-child {
+  width: 40%;
+  border: 2px solid #696969;
 }
 
 /*# sourceMappingURL=style.css.map */

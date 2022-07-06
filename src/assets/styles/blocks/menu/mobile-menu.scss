@@ -1,0 +1,27 @@
+.mobile-menu {
+
+  &__burger {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 75%;
+    align-self: flex-end;
+    border: 2px solid $black;
+  }
+
+  &__item:first-child {
+    width: 100%;
+    border: 2px solid $grey;
+  }
+
+  &__item:last-child {
+    width: 40%;
+    border: 2px solid $grey;
+  }
+}

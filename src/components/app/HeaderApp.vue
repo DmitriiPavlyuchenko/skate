@@ -27,17 +27,26 @@
             <router-link :to="{ name: 'skaters' }" class="nav-menu__link"
               >СКЕЙТЕРЫ
             </router-link>
+          </li>
+          <li class="nav-menu__item">
             <router-link :to="{ name: 'brands' }" class="nav-menu__link"
               >БРЕНДЫ
             </router-link>
           </li>
           <li class="nav-menu__item">
-            <router-link :to="{ name: 'videos' }" class="nav-menu__item"
+            <router-link :to="{ name: 'videos' }" class="nav-menu__link"
               >ВИДЕО
             </router-link>
           </li>
         </ul>
       </nav>
+      <div class="header__mobile-menu mobile-menu">
+        <div class="mobile-menu__burger">
+          <span class="mobile-menu__item"></span>
+          <span class="mobile-menu__item"></span>
+          <span class="mobile-menu__item"></span>
+        </div>
+      </div>
       <div class="header__aside">
         <div class="header__authorization">
           <router-link :to="{ name: 'sign_in' }" class="header__login"
