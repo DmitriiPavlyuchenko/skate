@@ -7,7 +7,11 @@
     </div>
     <div class="news-item__aside">
       <div class="news-item__buttons">
-        <ButtonBase class="news-item__open dark-green">Открыть</ButtonBase>
+        <router-link
+          :to="{ name: 'newsOpen', params: { id: newsItem.createdAt } }"
+          class="news-item__open dark-green"
+          >Открыть
+        </router-link>
         <ButtonBase class="news-item__delete red">Удалить</ButtonBase>
       </div>
       <span class="news-item__date">{{ newsItem.createdAt }}</span>

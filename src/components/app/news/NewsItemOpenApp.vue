@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <div class="kek">kek</div>
+</template>
 
 <script>
 export default {
