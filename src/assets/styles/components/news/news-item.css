@@ -12,10 +12,11 @@
   width: 80%;
 }
 .news-item__body {
+  flex: 0 1 60%;
   align-self: flex-start;
 }
 .news-item__picture {
-  width: 30%;
+  width: 25%;
 }
 .news-item__picture > img {
   height: 100%;
@@ -38,7 +39,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: start;
+  text-align: center;
+  flex: 0 1 15%;
+  gap: 15px;
+}
+.news-item__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /*# sourceMappingURL=news-item.css.map */

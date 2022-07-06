@@ -14,6 +14,9 @@
   &__body {
     flex: 0 1 60%;
     align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   }
 
   &__picture {
@@ -33,12 +36,11 @@
   }
 
   &__title {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   &__text {
     display: block;
-    margin-top: 20px;
   }
 
   &__aside {
