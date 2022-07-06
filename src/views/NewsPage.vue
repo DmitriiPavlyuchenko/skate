@@ -1,8 +1,8 @@
 <template>
   <div class="news">
     <div class="news__container container">
-      <h1 class="news__title">Новости</h1>
-      <ul v-for="newsItem in news" :key="newsItem.title" class="news"></ul>
+      <h1 class="news__title page-title">Новости</h1>
+      <ul class="news"></ul>
     </div>
   </div>
 </template>

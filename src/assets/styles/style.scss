@@ -1,7 +1,8 @@
 @import "utils/fonts",
 "utils/variables",
 "utils/normalize",
-"utils/default-settings";
+"utils/default-settings",
+"utils/class-style";
 
 @import "@/assets/icon-fonts/style.css";
 
@@ -10,4 +11,5 @@
 @import "blocks/logo",
 "blocks/menu/nav-menu";
 
-@import "views/home-page";
+@import "views/home-page",
+"views/news-page";

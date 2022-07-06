@@ -483,6 +483,12 @@ textarea {
   }
 }
 
+.page-title {
+  font-size: 35px;
+  padding: 35px 0px 35px;
+  margin: 0 auto;
+}
+
 .header {
   background-color: #ffffff;
   position: sticky;
@@ -653,6 +659,11 @@ textarea {
   .nav-menu__item:first-child {
     padding-top: 0;
   }
+}
+.news__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
