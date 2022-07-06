@@ -1,5 +1,19 @@
 .page-title {
   font-size: 35px;
-  padding: 35px 0px 35px;
+  padding: 50px 0px 50px;
   margin: 0 auto;
+}
+
+.button {
+  padding: 10px 15px;
+  color: $white;
+  border-radius: 15px;
+}
+
+.dark-green {
+  background-color: $dark-green;
+}
+
+.red {
+  background-color: $red;
 }

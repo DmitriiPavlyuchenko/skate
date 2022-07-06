@@ -2,7 +2,7 @@
   <div class="news">
     <div class="news__container container">
       <h1 class="news__title page-title">Новости</h1>
-      <ul class="news"></ul>
+      <NewsListApp :news="news"></NewsListApp>
     </div>
   </div>
 </template>
@@ -11,9 +11,12 @@
 import { defineComponent } from "vue";
 import { API, STATUS_CODE } from "@/constants/api";
 import { getNews } from "@/api/news";
+import NewsListApp from "@/components/app/news/NewsListApp";
 
 export default defineComponent({
   name: "NewsPage",
+  components: { NewsListApp },
+
   data() {
     return {
       news: [],

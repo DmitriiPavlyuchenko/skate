@@ -6,7 +6,9 @@
 
 @import "@/assets/icon-fonts/style.css";
 
-@import "components/header";
+@import "components/header",
+"components/news/news-item",
+"components/news/news-list";
 
 @import "blocks/logo",
 "blocks/menu/nav-menu";
