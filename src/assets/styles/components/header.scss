@@ -54,6 +54,36 @@
   &__mobile-menu {
     display: none;
   }
+
+  &__burger {
+    display: none;
+  }
+
+  &__burger-button {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: inherit;
+  }
+
+  &__burger-item {
+    width: 75%;
+    align-self: flex-end;
+    border: 2px solid $black;
+  }
+
+  &__burger-item:first-child {
+    width: 100%;
+    border: 2px solid $grey;
+  }
+
+  &__burger-item:last-child {
+    width: 40%;
+    border: 2px solid $grey;
+  }
 }
 
 @media (max-width: 998px) {
@@ -82,22 +112,23 @@
 
     &__container {
       min-height: 60px;
+      gap: 0;
     }
 
-    &__menu {
-      display: none;
-    }
-
-    &__mobile-menu {
+    &__burger {
+      order: 2;
       display: flex;
       align-items: center;
-      order: 2;
       flex: 0 1 50%;
       justify-content: flex-end;
     }
 
+    &__menu {
+      flex: none;
+    }
+
     &__logo {
-      order: 2;
+      order: 1;
       flex: 0 1 50%;
     }
 

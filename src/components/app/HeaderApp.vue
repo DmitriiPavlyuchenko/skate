@@ -15,40 +15,84 @@
         <ul class="nav-menu__list">
           <li class="nav-menu__item">
             <router-link :to="{ name: 'news' }" class="nav-menu__link"
-              >НОВОСТИ
+              >Новости
             </router-link>
           </li>
           <li class="nav-menu__item">
             <router-link :to="{ name: 'series' }" class="nav-menu__link"
-              >СЕРИИ
+              >Серии
             </router-link>
           </li>
           <li class="nav-menu__item">
             <router-link :to="{ name: 'skaters' }" class="nav-menu__link"
-              >СКЕЙТЕРЫ
+              >Скейтеры
             </router-link>
           </li>
           <li class="nav-menu__item">
             <router-link :to="{ name: 'brands' }" class="nav-menu__link"
-              >БРЕНДЫ
+              >Бренды
             </router-link>
           </li>
           <li class="nav-menu__item">
             <router-link :to="{ name: 'videos' }" class="nav-menu__link"
-              >ВИДЕО
+              >Видео
             </router-link>
           </li>
         </ul>
+        <MobileTransition name="mobile-menu">
+          <ul v-show="isMobileNav" class="nav-menu__mobile-list">
+            <li class="nav-menu__mobile-item">
+              <router-link :to="{ name: 'news' }" class="nav-menu__mobile-link"
+                >Новости
+              </router-link>
+            </li>
+            <li class="nav-menu__mobile-item">
+              <router-link
+                :to="{ name: 'series' }"
+                class="nav-menu__mobile-link"
+                >Серии
+              </router-link>
+            </li>
+            <li class="nav-menu__mobile-item">
+              <router-link
+                :to="{ name: 'skaters' }"
+                class="nav-menu__mobile-link"
+                >Скейтеры
+              </router-link>
+            </li>
+            <li class="nav-menu__mobile-item">
+              <router-link
+                :to="{ name: 'brands' }"
+                class="nav-menu__mobile-link"
+                >Бренды
+              </router-link>
+            </li>
+            <li class="nav-menu__mobile-item">
+              <router-link
+                :to="{ name: 'videos' }"
+                class="nav-menu__mobile-link"
+                >Видео
+              </router-link>
+            </li>
+            <li class="nav-menu__mobile-item">
+              <router-link
+                :to="{ name: 'sign_in' }"
+                class="nav-menu__mobile-link"
+                >Личный кабинет
+              </router-link>
+            </li>
+          </ul>
+        </MobileTransition>
       </nav>
-      <div class="header__mobile-menu mobile-menu">
+      <div class="header__burger">
         <button
-          class="mobile-menu__burger"
+          class="header__burger-button"
           type="button"
-          @click="isActive ? (isActive = false) : (isActive = true)"
+          @click="isMobileNav ? (isMobileNav = false) : (isMobileNav = true)"
         >
-          <span class="mobile-menu__item"></span>
-          <span class="mobile-menu__item"></span>
-          <span class="mobile-menu__item"></span>
+          <span class="header__burger-item"></span>
+          <span class="header__burger-item"></span>
+          <span class="header__burger-item"></span>
         </button>
       </div>
       <div class="header__aside">
@@ -69,10 +113,28 @@ export default defineComponent({
   name: "HeaderApp",
   data() {
     return {
-      isActive: false,
+      isMobile: false,
+      isMobileNav: false,
+      windowWidth: 0,
     };
   },
+  created() {
+    window.addEventListener("resize", this.checkScreen);
+  },
   computed: {},
+  methods: {
+    checkScreen() {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 780) {
+        this.isMobile = true;
+        return;
+      } else {
+        this.isMobile = false;
+        this.isMobileNav = false;
+        return;
+      }
+    },
+  },
 });
 </script>
 

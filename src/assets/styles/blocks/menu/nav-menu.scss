@@ -5,29 +5,69 @@
     gap: 15px;
   }
 
-  &__item {
-    
-  }
-
   &__link {
     cursor: pointer;
+    text-transform: uppercase;
     color: $black;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
   }
 
   &__link:hover {
     color: $grey;
+    border-color: $grey;
   }
 
   &__link:active {
     color: $grey;
+    border-color: $grey;
   }
 }
+
 
 @media (max-width: 1300px) {
   .nav-menu {
 
     &__list {
       gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .nav-menu {
+
+    &__mobile-list {
+      display: block;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      max-width: 100%;
+      border-top: 1px solid $grey;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      padding-top: 30px;
+      background-color: $white;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__mobile-item {
+      padding-top: 10px;
+      text-transform: uppercase;
+    }
+
+    &__mobile-link {
+      color: $black;
+    }
+
+    &__item:first-child {
+      padding-top: 0;
     }
   }
 }
