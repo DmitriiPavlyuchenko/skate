@@ -600,6 +600,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background-color: inherit;
 }
 .mobile-menu__item {
   width: 75%;

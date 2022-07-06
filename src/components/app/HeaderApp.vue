@@ -41,11 +41,15 @@
         </ul>
       </nav>
       <div class="header__mobile-menu mobile-menu">
-        <div class="mobile-menu__burger">
+        <button
+          class="mobile-menu__burger"
+          type="button"
+          @click="isActive ? (isActive = false) : (isActive = true)"
+        >
           <span class="mobile-menu__item"></span>
           <span class="mobile-menu__item"></span>
           <span class="mobile-menu__item"></span>
-        </div>
+        </button>
       </div>
       <div class="header__aside">
         <div class="header__authorization">
@@ -64,8 +68,11 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "HeaderApp",
   data() {
-    return {};
+    return {
+      isActive: false,
+    };
   },
+  computed: {},
 });
 </script>
 
