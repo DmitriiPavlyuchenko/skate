@@ -1,6 +1,10 @@
 <template>
-  <div class="news">
-    <div class="news__container container"></div>
+  <div class="news-details">
+    <div class="news-details__container container">
+      <h3 class="news-details__title page-title">{{ newsItem.title }}</h3>
+      <span class="news-details__text">{{ newsItem.text }}</span>
+      <span class="news-details__date">{{ newsItem.createdAt }}</span>
+    </div>
   </div>
 </template>
 
@@ -14,6 +18,7 @@ export default defineComponent({
   data() {
     return {
       id: this.$route.params.id,
+      newsItem: {},
     };
   },
   created() {
@@ -25,7 +30,7 @@ export default defineComponent({
         const URL = API.newsPath;
         const newsId = this.id;
         const response = await getNewsItemInformation(URL, newsId);
-        console.log(response.data);
+        this.newsItem = response.data;
       } catch (error) {
         console.log(error);
       }
