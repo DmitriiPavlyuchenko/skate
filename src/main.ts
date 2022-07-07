@@ -5,6 +5,7 @@ import store from "./store";
 import axios from "axios";
 import { API } from "@/constants/api";
 import components from "@/components/Ui";
+import Toaster from "@meforma/vue-toaster";
 
 const app = createApp(App);
 
@@ -14,4 +15,4 @@ components.forEach((component) => {
   app.component(component.name, component);
 });
 
-app.use(store).use(router).mount("#app");
+app.use(store).use(Toaster).use(router).mount("#app");

@@ -3,7 +3,3 @@ export const API = {
 
   newsPath: "/news",
 };
-
-export const STATUS_CODE = {
-  SUCCESS: 200,
-};
