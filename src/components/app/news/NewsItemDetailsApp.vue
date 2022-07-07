@@ -11,7 +11,8 @@
 <script>
 import { defineComponent } from "vue";
 import { getNewsItemInformation } from "@/api/news";
-import { API, STATUS_CODE } from "@/constants/api";
+import { API } from "@/constants/api";
+import { STATUS_CODE } from "@/constants/status-code";
 
 export default defineComponent({
   name: "NewsItemOpenApp",

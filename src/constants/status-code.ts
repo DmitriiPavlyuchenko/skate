@@ -1,3 +1,3 @@
-export const StatusCode = {
+export const STATUS_CODE = {
   SUCCESS: 200,
 };

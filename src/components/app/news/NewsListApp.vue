@@ -11,9 +11,9 @@
 <script>
 import NewsItemApp from "@/components/app/news/NewsItemApp";
 import { API } from "@/constants/api";
-import { StatusCode } from "@/constants/status-code";
 import { getNews } from "@/api/news";
 import { DEFAULT_ERROR_TOAST_CONFIG, TOAST_MESSAGE } from "@/constants/toast";
+import { STATUS_CODE } from "@/constants/status-code";
 
 export default {
   name: "NewsListApp",
@@ -31,7 +31,7 @@ export default {
       try {
         const URL = API.newsPath;
         const response = await getNews(URL);
-        if (response.status === StatusCode.SUCCESS) {
+        if (response.status === STATUS_CODE.SUCCESS) {
           this.news = response.data;
         }
       } catch (error) {
