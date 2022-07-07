@@ -1,6 +1,7 @@
-.news__container {
+.news-details__container {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=news-item-details.css.map */

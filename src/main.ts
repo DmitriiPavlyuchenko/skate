@@ -4,9 +4,14 @@ import router from "./router";
 import store from "./store";
 import axios from "axios";
 import { API } from "@/constants/api";
+import components from "@/components/Ui";
 
 const app = createApp(App);
 
 axios.defaults.baseURL = API.DEFAULT_BASEURL;
+
+components.forEach((component) => {
+  app.component(component.name, component);
+});
 
 app.use(store).use(router).mount("#app");
