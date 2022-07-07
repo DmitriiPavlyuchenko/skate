@@ -10,14 +10,36 @@
 
 <script>
 import NewsItemApp from "@/components/app/news/NewsItemApp";
+import { API } from "@/constants/api";
+import { StatusCode } from "@/constants/status-code";
+import { getNews } from "@/api/news";
+import { DEFAULT_ERROR_TOAST_CONFIG, TOAST_MESSAGE } from "@/constants/toast";
 
 export default {
   name: "NewsListApp",
   components: { NewsItemApp },
-  props: {
-    news: {
-      type: Object,
-      required: true,
+  data() {
+    return {
+      news: [],
+    };
+  },
+  created() {
+    this.getNews();
+  },
+  methods: {
+    async getNews() {
+      try {
+        const URL = API.newsPath;
+        const response = await getNews(URL);
+        if (response.status === StatusCode.SUCCESS) {
+          this.news = response.data;
+        }
+      } catch (error) {
+        this.$toast.show(
+          TOAST_MESSAGE.ERROR_RESPONSE,
+          DEFAULT_ERROR_TOAST_CONFIG
+        );
+      }
     },
   },
 };
