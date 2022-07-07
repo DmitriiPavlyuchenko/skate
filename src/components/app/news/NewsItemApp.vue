@@ -8,7 +8,10 @@
     <div class="news-item__aside">
       <div class="news-item__buttons">
         <router-link
-          :to="{ name: 'newsOpen', params: { id: newsItem.createdAt } }"
+          :to="{
+            name: 'newsOpen',
+            params: { id: newsItem.uuid },
+          }"
           class="news-item__open dark-green"
           >Открыть
         </router-link>

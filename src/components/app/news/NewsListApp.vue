@@ -14,7 +14,6 @@ import NewsItemApp from "@/components/app/news/NewsItemApp";
 export default {
   name: "NewsListApp",
   components: { NewsItemApp },
-
   props: {
     news: {
       type: Object,
