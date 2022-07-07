@@ -11,7 +11,7 @@
 <script>
 import { defineComponent } from "vue";
 import { getNewsItemInformation } from "@/api/news";
-import { API } from "@/constants/api";
+import { API, STATUS_CODE } from "@/constants/api";
 
 export default defineComponent({
   name: "NewsItemOpenApp",
@@ -30,7 +30,9 @@ export default defineComponent({
         const URL = API.newsPath;
         const newsId = this.id;
         const response = await getNewsItemInformation(URL, newsId);
-        this.newsItem = response.data;
+        if (response.status === STATUS_CODE.SUCCESS) {
+          this.newsItem = response.data;
+        }
       } catch (error) {
         console.log(error);
       }
