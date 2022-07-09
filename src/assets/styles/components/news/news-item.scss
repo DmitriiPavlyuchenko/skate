@@ -21,9 +21,6 @@
 
   &__picture {
     width: 25%;
-  }
-
-  &__picture > img {
     height: 100%;
     object-fit: contain;
     max-width: 100%;
@@ -60,7 +57,47 @@
 
   &__open {
     padding: 10px 15px;
-    color: #ffffff;
+    color: $white;
     border-radius: 15px;
+  }
+}
+
+@media (max-width: 998px) {
+  .news-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .news-item {
+    flex-direction: column;
+    max-height: none;
+    gap: 20px;
+
+    &__title {
+      word-break: break-all;
+      font-size: 20px;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__picture {
+      width: 100%;
+      max-height: 250px;
+    }
+
+    &__buttons {
+      flex-direction: row;
+    }
+
+    &__open {
+      padding: 10px 10px;
+    }
+
+    &__date {
+      text-align: start;
+    }
   }
 }
