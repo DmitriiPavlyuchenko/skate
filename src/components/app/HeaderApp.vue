@@ -94,9 +94,9 @@
           type="button"
           @click="isMobileNav ? (isMobileNav = false) : (isMobileNav = true)"
         >
-          <span :class="isMenuActive"></span>
+          <span :class="isMenuClassActive"></span>
           <span class="header__burger-item"></span>
-          <span :class="isMenuActive"></span>
+          <span :class="isMenuClassActive"></span>
         </button>
       </div>
       <div class="header__aside">
@@ -130,7 +130,7 @@ export default defineComponent({
     window.addEventListener("resize", this.checkScreen);
   },
   computed: {
-    isMenuActive: function (): object {
+    isMenuClassActive: function (): object {
       return {
         "header__burger-item": !this.isMobileNav,
         "header__burger-item_active": this.isMobileNav,
