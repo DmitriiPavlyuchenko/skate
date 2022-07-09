@@ -17,3 +17,9 @@
 .red {
   background-color: $red;
 }
+
+@media (max-width: 780px) {
+  .button {
+    padding: 10px 10px;
+  }
+}

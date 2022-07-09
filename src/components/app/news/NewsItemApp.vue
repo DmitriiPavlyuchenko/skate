@@ -1,6 +1,6 @@
 <template>
   <li class="news-item">
-    <img alt="" class="news-item__picture" src="" />
+    <img alt="" class="news-item__picture" src="@/assets/img/header/Logo.png" />
     <div class="news-item__body">
       <h3 class="news-item__title">{{ newsItem.title }}</h3>
       <p class="news-item__text">{{ newsItem.text }}</p>
