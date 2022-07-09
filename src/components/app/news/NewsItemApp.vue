@@ -17,7 +17,7 @@
         </router-link>
         <ButtonBase class="news-item__delete red">Удалить</ButtonBase>
       </div>
-      <span class="news-item__date">{{ newsItem.createdAt }}</span>
+      <span class="news-item__date">{{ normalizedDate }}</span>
     </div>
   </li>
 </template>
@@ -32,6 +32,11 @@ export default {
     newsItem: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    normalizedDate() {
+      return this.newsItem.createdAt.split(" ").slice(0, 1).toString();
     },
   },
 };
