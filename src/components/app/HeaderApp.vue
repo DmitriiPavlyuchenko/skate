@@ -82,7 +82,7 @@
               <router-link
                 :to="{ name: 'sign_in' }"
                 class="nav-menu__mobile-link"
-                >Личный кабинет
+                >Вход / Регистрация
               </router-link>
             </li>
           </ul>
@@ -102,7 +102,7 @@
       <div class="header__aside">
         <div class="header__authorization">
           <router-link :to="{ name: 'sign_in' }" class="header__login"
-            >Личный кабинет
+            >Вход / Регистрация
           </router-link>
         </div>
       </div>

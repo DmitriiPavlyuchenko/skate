@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icon_fonts';
-  src: url('fonts/icon_fonts.eot?cw5khk');
-  src: url('fonts/icon_fonts.eot?cw5khk#iefix') format('embedded-opentype'),
-  url('@/assets/icon-fonts/fonts/icon_fonts.woff') format('woff'),
-  url('@/assets/icon-fonts/fonts/icon_fonts.svg') format('svg');
+  src: url('@/assets/icon-fonts/fonts/icon-font.eot');
+  src: url('@/assets/icon-fonts/fonts/icon-font.eot') format('embedded-opentype'),
+  url('@/assets/icon-fonts/fonts/icon-font.woff') format('woff'),
+  url('@/assets/icon-fonts/fonts/icon-font.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-personal_area:before {
-  content: "\e971";
+.icon-home:before {
+  content: "\e902";
+}
+
+.icon-close:before {
+  content: "\ea0f";
+}
+
+.icon-enter:before {
+  content: "\ea13";
 }

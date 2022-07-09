@@ -1,0 +1,53 @@
+.form {
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
+
+  &__title {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+
+  &__input {
+    border-radius: 10px;
+    box-shadow: 0 1px 0 $grey, 0 -2px 5px rgb(0 0 0 / 8%) inset;
+    transition: all 0.5s ease;
+    border: 1px solid $grey;
+    background-color: $grey-bg;
+    color: $black;
+    padding: 15px 10px 15px 40px;
+    width: 80%;
+  }
+
+  &__input::placeholder {
+    color: $black;
+    font-size: 15px;
+  }
+
+  &__input:focus {
+    border-color: $red;
+    background-color: $white;
+  }
+
+  &__textarea {
+    border-radius: 10px;
+    box-shadow: 0 1px 0 $grey, 0 -2px 5px rgb(0 0 0 / 8%) inset;
+    transition: all 0.5s ease;
+    border: 1px solid $grey;
+    background-color: $grey-bg;
+    color: $black;
+    padding: 15px 10px 15px 40px;
+    width: 80%;
+    resize: none;
+  }
+
+  &__textarea::placeholder {
+    color: $black;
+    font-size: 15px;
+  }
+
+  &__textarea:focus {
+    border-color: $red;
+    background-color: $white;
+  }
+}
