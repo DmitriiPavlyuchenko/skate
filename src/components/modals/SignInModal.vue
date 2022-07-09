@@ -7,8 +7,10 @@
       <SignInForm></SignInForm>
     </template>
     <template #buttons>
-      <ButtonBase>Войти</ButtonBase>
-      <router-link :to="{ name: 'sign_up' }">Регистрация</router-link>
+      <ButtonBase class="red">Войти</ButtonBase>
+      <router-link :to="{ name: 'sign_up' }" class="form-link-red"
+        >Регистрация
+      </router-link>
     </template>
   </DefaultModal>
 </template>

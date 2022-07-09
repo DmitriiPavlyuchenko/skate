@@ -1,0 +1,88 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  &__overlay {
+    background: $overlay;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__container {
+    white-space: nowrap;
+    height: 100%;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+  }
+
+  &__container:before {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 450px;
+    padding: 48px 32px 32px;
+    border-radius: 4px;
+    color: $admin-link;
+    box-shadow: $shadow;
+    min-width: calc(300px - 2 * 20px);
+    margin: 20px;
+    white-space: normal;
+    overflow: visible;
+    display: inline-block;
+    vertical-align: middle;
+    background: $white;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    flex-direction: column;
+    width: 35%;
+    margin: 0 auto;
+  }
+}
+
+.icon-close {
+  font-size: 14px;
+  background-color: inherit;
+  color: $grey;
+}
+
+.icon-close:hover {
+  color: $black;
+}
+
+@media (max-width: 500px) {
+  .modal {
+    &__wrapper {
+      width: 80%;
+      padding: 30px 20px 30px;
+    }
+
+    &__buttons {
+      width: 65%;
+    }
+  }
+}
