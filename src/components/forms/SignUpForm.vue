@@ -14,7 +14,7 @@
     <div class="form__element">
       <label class="form__label" for="name"></label>
       <InputBase
-        v-model="registry.name"
+        v-model="registry.username"
         class="form__input name"
         name="name"
         placeholder="Имя"
@@ -31,7 +31,7 @@
         type="password"
       />
     </div>
-    <ButtonBase class="red form__button" type="button"
+    <ButtonBase class="red form__button" type="button" @click="signUp"
       >Зарегистрироваться
     </ButtonBase>
     <router-link :to="{ name: 'sign_in' }" class="form-link-red"
@@ -43,6 +43,9 @@
 <script>
 import { defineComponent } from "vue";
 import InputBase from "@/components/Ui/InputBase";
+import { API } from "@/constants/api";
+import { signUp } from "@/api/authorization";
+import { DEFAULT_ERROR_TOAST_CONFIG, TOAST_MESSAGE } from "@/constants/toast";
 
 export default defineComponent({
   name: "SignUpForm",
@@ -52,10 +55,29 @@ export default defineComponent({
       title: "Регистрация",
       registry: {
         email: "",
-        name: "",
+        username: "",
         password: "",
       },
     };
+  },
+  methods: {
+    async signUp() {
+      try {
+        const URL = API.signUpPath;
+        const data = {
+          email: this.registry.email,
+          username: this.registry.username,
+          password: this.registry.password,
+        };
+        const response = await signUp(URL, data);
+        console.log(response);
+      } catch (error) {
+        this.$toast.show(
+          TOAST_MESSAGE.ERROR_RESPONSE,
+          DEFAULT_ERROR_TOAST_CONFIG
+        );
+      }
+    },
   },
 });
 </script>
