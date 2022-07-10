@@ -3,7 +3,11 @@
     <div class="authorization__container container">
       <div class="authorization__wrapper">
         <div class="authorization__form">
-          <router-view></router-view>
+          <router-view v-slot="{ Component }">
+            <keep-alive>
+              <component :is="Component"></component>
+            </keep-alive>
+          </router-view>
         </div>
       </div>
     </div>

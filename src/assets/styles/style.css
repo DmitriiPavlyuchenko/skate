@@ -809,6 +809,11 @@ textarea {
   font-size: 24px;
   padding-bottom: 20px;
 }
+.form__element {
+  position: relative;
+  transition: 0.4s;
+  opacity: 1;
+}
 .form__input {
   border-radius: 10px;
   box-shadow: 0 1px 0 #696969, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
@@ -820,12 +825,17 @@ textarea {
   width: 100%;
 }
 .form__input::placeholder {
+  transition: 0.5s;
   color: #000000;
   font-size: 15px;
 }
 .form__input:focus {
   border-color: #650c0c;
   background-color: #ffffff;
+}
+.form__input:focus::placeholder {
+  font-size: 10px;
+  transform: translateY(-16px);
 }
 .form__textarea {
   border-radius: 10px;

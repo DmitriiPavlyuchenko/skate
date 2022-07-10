@@ -8,6 +8,12 @@
     padding-bottom: 20px;
   }
 
+  &__element {
+    position: relative;
+    transition: .4s;
+    opacity: 1;
+  }
+
   &__input {
     border-radius: 10px;
     box-shadow: 0 1px 0 $grey, 0 -2px 5px rgb(0 0 0 / 8%) inset;
@@ -20,6 +26,7 @@
   }
 
   &__input::placeholder {
+    transition: 0.5s;
     color: $black;
     font-size: 15px;
   }
@@ -27,6 +34,11 @@
   &__input:focus {
     border-color: $red;
     background-color: $white;
+  }
+
+  &__input:focus::placeholder {
+    font-size: 10px;
+    transform: translateY(-16px);
   }
 
   &__textarea {

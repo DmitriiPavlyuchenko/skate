@@ -1,22 +1,27 @@
 <template>
   <h4 class="form__title">{{ title }}</h4>
   <form class="form__login form" @submit.prevent>
-    <label for="email">
+    <div class="form__element">
+      <label class="form__label" for="email"></label>
       <InputBase
         v-model="authorization.email"
         class="form__input username"
-        placeholder="Email "
+        name="email"
+        placeholder="Email"
         type="text"
       />
-    </label>
-    <label for="password">
+    </div>
+    <div class="form__element">
+      <label class="form__label" for="password"></label>
       <InputBase
         v-model="authorization.password"
         class="form__input password"
+        name="password"
         placeholder="Пароль"
         type="password"
       />
-    </label>
+    </div>
+
     <ButtonBase class="red form__button" type="button">Войти</ButtonBase>
     <router-link :to="{ name: 'sign_up' }" class="form-link-red"
       >Зарегистрироваться
@@ -29,7 +34,7 @@ import { defineComponent } from "vue";
 import InputBase from "@/components/Ui/InputBase";
 
 export default defineComponent({
-  name: "LoginForm",
+  name: "SignInForm",
   components: { InputBase },
   data() {
     return {
