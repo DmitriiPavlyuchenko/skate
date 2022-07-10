@@ -78,9 +78,14 @@
                 >Видео
               </router-link>
             </li>
-            <button class="nav-menu__mobile-item" type="button">
-              Вход / Регистрация
-            </button>
+            <li class="nav-menu__mobile-item">
+              <router-link
+                :to="{ name: 'sign_in' }"
+                class="header__login nav-menu__mobile-link"
+              >
+                Вход / Регистрация
+              </router-link>
+            </li>
           </ul>
         </MobileTransition>
       </nav>

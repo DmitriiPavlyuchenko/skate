@@ -17,7 +17,7 @@
         type="password"
       />
     </label>
-    <ButtonBase class="red" type="button">Войти</ButtonBase>
+    <ButtonBase class="red form__button" type="button">Войти</ButtonBase>
     <router-link :to="{ name: 'sign_up' }" class="form-link-red"
       >Зарегистрироваться
     </router-link>

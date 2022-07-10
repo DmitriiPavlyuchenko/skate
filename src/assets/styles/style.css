@@ -731,8 +731,6 @@ textarea {
   padding: 10px 15px;
   color: #ffffff;
   border-radius: 15px;
-  width: 50%;
-  align-self: center;
 }
 
 .logo__image {
@@ -839,6 +837,10 @@ textarea {
   padding: 15px 10px 15px 40px;
   width: 80%;
   resize: none;
+}
+.form__button {
+  width: 70%;
+  align-self: center;
 }
 .form__textarea::placeholder {
   color: #000000;

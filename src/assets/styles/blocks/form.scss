@@ -41,6 +41,11 @@
     resize: none;
   }
 
+  &__button {
+    width: 70%;
+    align-self: center;
+  }
+
   &__textarea::placeholder {
     color: $black;
     font-size: 15px;
