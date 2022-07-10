@@ -37,14 +37,21 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/VideosPage.vue"),
   },
   {
-    path: "/sign_in",
-    name: "sign_in",
-    component: () => import("@/components/modals/SignInModal.vue"),
-  },
-  {
-    path: "/sign_up",
-    name: "sign_up",
-    component: () => import("@/components/modals/SignUpModal.vue"),
+    path: "/authorization",
+    name: "authorization",
+    component: () => import("@/views/AuthorizationPage.vue"),
+    children: [
+      {
+        path: "/authorization/sign_in",
+        name: "sign_in",
+        component: () => import("@/components/forms/SignInForm.vue"),
+      },
+      {
+        path: "/authorization/sign_up",
+        name: "sign_up",
+        component: () => import("@/components/forms/SignUpForm.vue"),
+      },
+    ],
   },
 ];
 

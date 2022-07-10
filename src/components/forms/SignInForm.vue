@@ -1,4 +1,5 @@
 <template>
+  <h4 class="form__title">{{ title }}</h4>
   <form class="form__login form" @submit.prevent>
     <label for="email">
       <InputBase
@@ -16,6 +17,10 @@
         type="password"
       />
     </label>
+    <ButtonBase class="red" type="button">Войти</ButtonBase>
+    <router-link :to="{ name: 'sign_up' }" class="form-link-red"
+      >Зарегистрироваться
+    </router-link>
   </form>
 </template>
 
@@ -24,18 +29,17 @@ import { defineComponent } from "vue";
 import InputBase from "@/components/Ui/InputBase";
 
 export default defineComponent({
-  name: "SignInForm",
+  name: "LoginForm",
   components: { InputBase },
   data() {
     return {
+      title: "Авторизация",
       authorization: {
         email: "",
         password: "",
       },
     };
   },
-
-  methods: {},
 });
 </script>
 

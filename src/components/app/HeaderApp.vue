@@ -78,13 +78,9 @@
                 >Видео
               </router-link>
             </li>
-            <li class="nav-menu__mobile-item">
-              <router-link
-                :to="{ name: 'sign_in' }"
-                class="nav-menu__mobile-link"
-                >Вход / Регистрация
-              </router-link>
-            </li>
+            <button class="nav-menu__mobile-item" type="button">
+              Вход / Регистрация
+            </button>
           </ul>
         </MobileTransition>
       </nav>
@@ -101,8 +97,8 @@
       </div>
       <div class="header__aside">
         <div class="header__authorization">
-          <router-link :to="{ name: 'sign_in' }" class="header__login"
-            >Вход / Регистрация
+          <router-link :to="{ name: 'sign_in' }" class="header__login">
+            Вход / Регистрация
           </router-link>
         </div>
       </div>

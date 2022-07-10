@@ -10,8 +10,7 @@
 "components/news/news-item",
 "components/news/news-list",
 "components/news/news-item-details",
-"components/Ui/button-base",
-"@/assets/styles/components/Ui/toast-base";
+"components/Ui/button-base";
 
 @import "blocks/logo",
 "blocks/menu/nav-menu",
@@ -19,4 +18,5 @@
 "blocks/modal";
 
 @import "views/home-page",
-"views/news-page";
+"views/news-page",
+"views/authorization-page";
