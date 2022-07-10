@@ -5,7 +5,7 @@
       <label class="form__label" for="email"></label>
       <InputBase
         v-model="authorization.email"
-        class="form__input username"
+        class="form__input email"
         name="email"
         placeholder="Email"
         type="text"

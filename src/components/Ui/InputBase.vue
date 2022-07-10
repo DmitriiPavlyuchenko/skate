@@ -1,5 +1,5 @@
 <template>
-  <input :value="modelValue" class="input" @input="updateValue" />
+  <input :value="modelValue" class="input" @input="emitValue" />
 </template>
 
 <script>
@@ -12,11 +12,18 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    modelModifiers: {
+      default: () => ({}),
+    },
   },
-  emits: ["update: modelValue"],
+  emits: ["update:modelValue"],
   methods: {
-    updateValue(event) {
-      this.$emit("update:modelValue", event.target.value);
+    emitValue(event) {
+      let value = event.target.value;
+      if (this.modelModifiers.capitalize) {
+        value = value.charAt(0).toUpperCase() + value.slice(1);
+      }
+      this.$emit("update:modelValue", value);
     },
   },
 });

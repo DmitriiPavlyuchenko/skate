@@ -14,8 +14,8 @@
     <div class="form__element">
       <label class="form__label" for="name"></label>
       <InputBase
-        v-model="registry.username"
-        class="form__input name"
+        v-model.capitalize="registry.username"
+        class="form__input username"
         name="name"
         placeholder="Имя"
         type="text"
