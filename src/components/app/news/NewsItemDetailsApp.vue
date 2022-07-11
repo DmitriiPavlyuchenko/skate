@@ -13,6 +13,7 @@ import { defineComponent } from "vue";
 import { getNewsItemInformation } from "@/api/news";
 import { API } from "@/constants/api";
 import { STATUS_CODE } from "@/constants/status-code";
+import { DEFAULT_ERROR_TOAST_CONFIG, TOAST_MESSAGE } from "@/constants/toast";
 
 export default defineComponent({
   name: "NewsItemOpenApp",
@@ -42,8 +43,11 @@ export default defineComponent({
         if (response.status === STATUS_CODE.SUCCESS) {
           this.newsItem = response.data;
         }
-      } catch (error) {
-        console.log(error);
+      } catch {
+        this.$toast.show(
+          TOAST_MESSAGE.ERROR_RESPONSE,
+          DEFAULT_ERROR_TOAST_CONFIG
+        );
       }
     },
   },

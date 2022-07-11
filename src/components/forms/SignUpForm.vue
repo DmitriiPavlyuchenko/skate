@@ -71,7 +71,7 @@ export default defineComponent({
         };
         const response = await signUp(URL, data);
         console.log(response);
-      } catch (error) {
+      } catch {
         this.$toast.show(
           TOAST_MESSAGE.ERROR_RESPONSE,
           DEFAULT_ERROR_TOAST_CONFIG
