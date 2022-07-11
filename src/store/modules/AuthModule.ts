@@ -3,7 +3,7 @@ import axios from "axios";
 import { STATUS_CODE } from "@/constants/status-code";
 import { Module } from "vuex";
 import { IAuth, IAuthorizationData } from "@/interfaces/store/Auth";
-import { Mutations } from "@/constants/store/Auth";
+import { mutations } from "@/constants/store/Auth";
 
 export const AuthModule: Module<IAuth, any> = {
   namespaced: true,
@@ -41,9 +41,9 @@ export const AuthModule: Module<IAuth, any> = {
         const URL = API.signInPath;
         const response = await axios.post(URL, data);
         if (response.status === STATUS_CODE.SUCCESS) {
-          store.commit(Mutations.getToken, response.data.token);
-          store.commit(Mutations.getRefreshToken, response.data.refresh_token);
-          store.commit(Mutations.authorizationSuccess, true);
+          store.commit(mutations.getToken, response.data.token);
+          store.commit(mutations.getRefreshToken, response.data.refresh_token);
+          store.commit(mutations.authorizationSuccess, true);
         }
       } catch (error) {
         console.log(error);

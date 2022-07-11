@@ -860,6 +860,12 @@ textarea {
   border-color: #650c0c;
   background-color: #ffffff;
 }
+.form__error {
+  color: #650c0c;
+  text-align: start;
+  display: block;
+  margin-top: 5px;
+}
 
 .modal {
   position: fixed;

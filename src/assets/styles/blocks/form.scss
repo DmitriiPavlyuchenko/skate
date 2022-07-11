@@ -67,4 +67,11 @@
     border-color: $red;
     background-color: $white;
   }
+
+  &__error {
+    color: $red;
+    text-align: start;
+    display: block;
+    margin-top: 5px;
+  }
 }
