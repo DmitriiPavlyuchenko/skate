@@ -1,0 +1,49 @@
+.authorization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+  }
+
+  &__wrapper {
+  }
+
+  &__form {
+    box-shadow: 0 1px 0 $white inset;
+    border: 1px solid #c4c6ca;
+    margin: 0 auto;
+    padding: 30px 40px;
+    text-align: center;
+    text-shadow: 0 1px 0 $shadow;
+    width: 500px;
+    background: -webkit-linear-gradient(top, rgba(248, 248, 248, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-radius: 15px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 25px;
+    flex: 0 1 100%;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    color: $black;
+  }
+
+  &__item:hover {
+    color: $grey;
+  }
+}
+
+@media (max-width: 500px) {
+  .authorization {
+
+    &__form {
+      width: 100%;
+      padding: 20px 15px;
+    }
+  }
+}

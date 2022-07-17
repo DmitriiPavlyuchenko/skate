@@ -1,0 +1,23 @@
+.page-title {
+  font-size: 35px;
+  padding: 50px 0px 50px;
+  margin: 0 auto;
+}
+
+.dark-green {
+  background-color: $dark-green;
+}
+
+.red {
+  background-color: $red;
+}
+
+.form-link-red {
+  color: $red;
+}
+
+@media (max-width: 780px) {
+  .button {
+    padding: 10px 10px;
+  }
+}

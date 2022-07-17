@@ -1,0 +1,21 @@
+.logo {
+
+  &__link {
+
+  }
+
+  &__image {
+    width: 220px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .logo {
+
+    &__image {
+      width: 180px;
+      height: 25px;
+    }
+  }
+}

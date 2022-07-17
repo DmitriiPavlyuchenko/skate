@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: $default-FontSize;
+  line-height: $default-LineHeight;
+  color: $black;
+  background-color: $grey-background;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  width: 100%;
+}
+
+input,
+button,
+select,
+option,
+textarea {
+  outline: none;
+}
+
+.container {
+  width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 100%;
+
+  @media (max-width: 1300px) {
+    width: 980px;
+  }
+  @media (max-width: 998px) {
+    width: 760px;
+  }
+  @media (max-width: 780px) {
+    width: 560px;
+  }
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
