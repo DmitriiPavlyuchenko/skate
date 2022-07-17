@@ -26,7 +26,14 @@ export default defineComponent({
   created() {
     this.getNewsItemInformation();
   },
-  watch: {},
+  watch: {
+    newsItem(newValue) {
+      this.newsItem.createdAt = newValue.createdAt
+        .split(" ")
+        .slice(0, 1)
+        .toString();
+    },
+  },
   methods: {
     async getNewsItemInformation() {
       try {
