@@ -1,0 +1,10 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+api :
+  type: annotation
+  prefix : /api
+  resource: '../src/Controller'
+
+api_refresh_token:
+  path: /api/auth/refresh
